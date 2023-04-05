@@ -55,7 +55,7 @@ for t in range(len(temp)):
   responses = []
   for p in range(N_prob):
       # prompt
-      prompt = story + X + Y + question # X, Y, and question varies for each problem
+      prompt = story + X[p] + Y[p] + question[p] # X, Y, and question varies for each problem
       # GPT-3 response
       response = openai.Completion.create(
       engine="text-davinci-003",
